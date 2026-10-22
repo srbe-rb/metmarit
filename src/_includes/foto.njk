@@ -2,7 +2,7 @@
 {% macro foto(src="", alt="", label="", maat="", cls="", pageUrl="/", caption="") -%}
 <figure class="foto {{ cls }}">
 {%- if src %}
-  <img src="{{ src | replace('/media/', 'media/') | rel(pageUrl) }}" alt="{{ alt }}" loading="lazy">
+  <img src="{{ src | replace('/media/', 'media/') | rel(pageUrl) }}" alt="{{ alt }}"{% if 'hero-media__img' in cls %} fetchpriority="high"{% else %} loading="lazy"{% endif %}>
 {%- else %}
   <div class="foto__ph" role="img" aria-label="Plek voor foto: {{ label }}"><span class="foto__label">{{ label }}</span>{% if maat %}<span class="foto__maat">{{ maat }}</span>{% endif %}</div>
 {%- endif %}
