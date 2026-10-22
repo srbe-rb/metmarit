@@ -1,0 +1,99 @@
+# Pages CMS (pagescms.org): Marit's editor. She logs in with GitHub and edits these three things.
+media:
+  input: src/media
+  output: /media
+
+content:
+  - name: schrijven
+    label: Schrijven
+    type: collection
+    path: src/schrijven
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [titel, date]
+      primary: titel
+      sort: [date]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: titel
+        label: Titel
+        type: string
+        required: true
+      - name: date
+        label: Datum
+        type: date
+        required: true
+      - name: samenvatting
+        label: Samenvatting (één of twee zinnen, ook voor Google)
+        type: text
+      - name: afbeelding
+        label: Foto bovenaan (optioneel)
+        type: image
+      - name: afbeelding_tekst
+        label: Korte beschrijving van de foto
+        type: string
+      - name: body
+        label: Tekst
+        type: rich-text
+
+  - name: werk
+    label: Werk en ervaring
+    type: collection
+    path: src/werk
+    filename: "{primary}.md"
+    view:
+      fields: [title, organisatie, van]
+      primary: title
+    fields:
+      - name: title
+        label: Functie of project
+        type: string
+        required: true
+      - name: organisatie
+        label: Organisatie
+        type: string
+      - name: plaats
+        label: Plaats
+        type: string
+      - name: van
+        label: Vanaf (jaar)
+        type: string
+      - name: tot
+        label: Tot (jaar, of 'heden'; leeg bij een project in één jaar)
+        type: string
+      - name: soort
+        label: Soort
+        type: select
+        options:
+          values: [Baan, Project, Eigen praktijk, Opleiding, Vrijwilligerswerk]
+      - name: body
+        label: Korte toelichting
+        type: rich-text
+
+  - name: wie-is-marit
+    label: Wie is Marit?
+    type: file
+    path: src/over/wie-is-marit.md
+    fields:
+      - name: kop
+        label: Openingszin
+        type: text
+      - name: foto_portret
+        label: Portret
+        type: image
+      - name: fotos
+        label: Uit mijn leven (vier foto's, vierkant uitgesneden)
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Foto
+            type: image
+          - name: tekst
+            label: Korte beschrijving
+            type: string
+      - name: body
+        label: Mijn verhaal
+        type: rich-text

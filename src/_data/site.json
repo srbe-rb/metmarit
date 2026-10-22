@@ -1,0 +1,41 @@
+{
+  "preview": true,
+  "url": "https://www.metmarit.nl",
+  "email": "metmarit@gmail.com",
+  "tel": "+31 6 51495471",
+  "telHref": "+31651495471",
+  "plaatsen": "Nunspeet · Ermelo · Online",
+  "kvk": "76979474",
+  "btw": "NL003150267B9",
+  "instagram": "https://www.instagram.com/metmarit/",
+  "instagramFeed": "",
+  "facebook": "https://www.facebook.com/metmarit/",
+  "linkedin": "https://www.linkedin.com/in/maritbrandsma/",
+  "nav": [
+    {
+      "href": "coaching.html",
+      "label": "Coaching",
+      "key": "coaching"
+    },
+    {
+      "href": "projectcoordinatie.html",
+      "label": "Projectcoördinatie",
+      "key": "project"
+    },
+    {
+      "href": "werk-en-ervaring.html",
+      "label": "Werk en ervaring",
+      "key": "werk"
+    },
+    {
+      "href": "schrijven.html",
+      "label": "Schrijven",
+      "key": "schrijven"
+    },
+    {
+      "href": "wie-is-marit.html",
+      "label": "Wie is Marit?",
+      "key": "wie"
+    }
+  ]
+}

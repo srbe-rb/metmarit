@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: "Schrijven | Met Marit"
+description: "Stukken van Marit Brandsma over mensen, cultuur, coaching en wat ze onderweg tegenkomt."
+active: schrijven
+slug: schrijven
+permalink: schrijven.html
+---
+<section class="hero">
+  <div class="wrap stack">
+    <h1>Wat ik onderweg tegenkom.</h1>
+    <p class="lead">Over mensen, over cultuur, over coaching, en over het leven dat steeds weer verandert.</p>
+  </div>
+</section>
+
+<section class="band" aria-label="Alle stukken" style="padding-top:clamp(2.5rem,5vw,4rem)">
+  <div class="wrap">
+{%- if collections.posts.length %}
+    <ul class="posts">
+{%- for post in collections.posts %}
+      <li><a class="post-card" href="{{ post.url | replace('/schrijven/', 'schrijven/') }}">
+        {% if post.data.afbeelding %}<img class="post-card__img" src="{{ post.data.afbeelding | replace('/media/', 'media/') }}" alt="" loading="lazy">{% endif %}
+        <time class="eyebrow" datetime="{{ post.date | isoDatum }}">{{ post.date | datum }}</time>
+        <h2>{{ post.data.titel }}</h2>
+        {% if post.data.samenvatting %}<p>{{ post.data.samenvatting }}</p>{% endif %}
+        <span class="textlink">Lees verder <span class="arrow" aria-hidden="true">→</span></span>
+      </a></li>
+{%- endfor %}
+    </ul>
+{%- else %}
+    <p class="lead">Hier komen binnenkort de eerste stukken.</p>
+{%- endif %}
+  </div>
+</section>

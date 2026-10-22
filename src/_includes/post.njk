@@ -1,0 +1,19 @@
+---
+layout: base.njk
+ogType: article
+---
+<article class="band">
+  <div class="wrap stack-lg">
+    <header class="stack" style="max-width:44rem">
+      <a class="textlink" href="{{ 'schrijven.html' | rel(page.url) }}"><span aria-hidden="true">←</span> Schrijven</a>
+      <p class="eyebrow"><time datetime="{{ page.date | isoDatum }}">{{ page.date | datum }}</time></p>
+      <h1 style="font-size:var(--step-3)">{{ titel }}</h1>
+      {% if samenvatting %}<p class="lead">{{ samenvatting }}</p>{% endif %}
+    </header>
+    {% if afbeelding %}<img class="post-image" src="{{ afbeelding | replace('/media/', 'media/') | rel(page.url) }}" alt="{{ afbeelding_tekst or '' }}">{% endif %}
+    <div class="prose article">
+{{ content | safe }}
+    </div>
+    <p class="muted" style="max-width:38rem">Wil je hierover doorpraten? <a href="{{ 'contact.html' | rel(page.url) }}">Neem contact op met Marit.</a></p>
+  </div>
+</article>

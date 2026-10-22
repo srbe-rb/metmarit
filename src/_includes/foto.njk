@@ -1,0 +1,11 @@
+{#- One image slot. With src it shows the photo; without, a plain placeholder naming the photo that belongs there. Always a rectangle. -#}
+{% macro foto(src="", alt="", label="", maat="", cls="", pageUrl="/", caption="") -%}
+<figure class="foto {{ cls }}">
+{%- if src %}
+  <img src="{{ src | replace('/media/', 'media/') | rel(pageUrl) }}" alt="{{ alt }}" loading="lazy">
+{%- else %}
+  <div class="foto__ph" role="img" aria-label="Plek voor foto: {{ label }}"><span class="foto__label">{{ label }}</span>{% if maat %}<span class="foto__maat">{{ maat }}</span>{% endif %}</div>
+{%- endif %}
+{%- if caption %}<figcaption class="foto__chip">{{ caption }}</figcaption>{% endif %}
+</figure>
+{%- endmacro %}

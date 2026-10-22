@@ -1,0 +1,88 @@
+---
+layout: "base.njk"
+title: "Met Marit | Coaching en interculturele projectcoördinatie in Nunspeet en Ermelo"
+description: "Creatieve coaching en interculturele projectcoördinatie door Marit Brandsma. Voor mensen die verder willen, en organisaties die verbinding zoeken. Nunspeet, Ermelo en online."
+active: "home"
+slug: ""
+permalink: "index.html"
+noindex: false
+---
+{% from "foto.njk" import foto %}
+<section class="hero-media hero-media--home">
+  <div class="hero-media__text stack">
+    <h1><span class="rotator" data-rotate="Verder|Praten|Ontdekken|Bouwen"><span class="rotator__word">Verder</span></span> met&nbsp;Marit.</h1>
+    <p class="lead">Ik ben Marit Brandsma. Ik coach mensen die geen genoegen meer nemen met ‘zo is het nou eenmaal’, en ik coördineer projecten waarin mensen met verschillende achtergronden elkaar vinden. In Nunspeet, Ermelo en online.</p>
+    <div class="actions"><a class="btn" href="contact.html">Plan een kennismaking <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  {{ foto(src="/media/marit-home.jpg", alt="Marit Brandsma buiten in de zon, met een kleurrijke gebreide sjaal", cls="hero-media__img", pageUrl=page.url) }}
+</section>
+
+<section class="band" aria-label="Waarmee ik je kan helpen">
+  <div class="wrap tiles">
+    <a class="tile tile--magenta" href="coaching.html">
+      <div class="tile__media">
+        {{ foto(label="Foto bij coaching", maat="liggend, 4:3", pageUrl=page.url) }}
+        <span class="tile__chip">Voor jezelf</span>
+        <span class="tile__title">Coaching</span>
+      </div>
+      <p>Je loopt ergens tegenaan, of je voelt dat er meer in je zit. Samen kijken we wat jij nodig hebt. <span class="arrow" aria-hidden="true">→</span></p>
+    </a>
+    <a class="tile" href="projectcoordinatie.html">
+      <div class="tile__media">
+        {{ foto(label="Foto bij een project", maat="liggend, 4:3", pageUrl=page.url) }}
+        <span class="tile__chip">Voor je organisatie</span>
+        <span class="tile__title">Projectcoördinatie</span>
+      </div>
+      <p>Projecten waarin verbinding tussen culturen het verschil maakt. Ik denk mee, organiseer en voer uit. <span class="arrow" aria-hidden="true">→</span></p>
+    </a>
+  </div>
+</section>
+
+<section class="band band--plum" aria-labelledby="story-title">
+  <div class="wrap stack-lg">
+    <h2 id="story-title">Opgegroeid tussen culturen.</h2>
+    <ol class="route" aria-label="Waar Marit opgroeide">
+      <li>Noorwegen</li><li>Oeganda</li><li>Ethiopië</li><li>Kenia</li><li>Verenigde Staten</li><li>Nederland</li>
+    </ol>
+    <div class="prose">
+      <p>Die jaren hebben gevormd hoe ik naar mensen kijk. In een coachgesprek merk je dat aan mijn nieuwsgierigheid, in een project aan hoe makkelijk ik verbinding maak.</p>
+      <a class="textlink" href="wie-is-marit.html">Lees mijn verhaal <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Een ervaring met Marit">
+  <div class="wrap">
+    <figure class="quote">
+      <blockquote><p class="big-quote">“De gesprekken zijn eerlijk, raak en doortastend, in een sfeer van veiligheid en ontspanning.”</p></blockquote>
+      <figcaption>Over coaching met Marit · <a href="ervaringen.html">alle ervaringen</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+{%- if collections.posts.length %}
+<section class="band band--tight" aria-labelledby="recent-title">
+  <div class="wrap split split--top">
+    <h2 id="recent-title">Recent geschreven</h2>
+    <ul class="post-list">
+{%- for post in collections.posts | eerste(3) %}
+      <li><a href="{{ post.url | replace('/schrijven/', 'schrijven/') }}"><span class="post-list__title">{{ post.data.titel }}</span><time datetime="{{ post.date | isoDatum }}">{{ post.date | datum }}</time></a></li>
+{%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+
+<section class="band band--magenta" aria-labelledby="cta-title">
+  <div class="wrap split">
+    <h2 id="cta-title">Kennismaken <span class="mark">met Marit</span></h2>
+    <div class="stack">
+      <div class="contact-lines">
+        <span><strong>Mail</strong> <a href="mailto:metmarit@gmail.com">metmarit@gmail.com</a></span>
+        <span><strong>Bel</strong> <a href="tel:+31651495471">+31 6 51495471</a></span>
+      </div>
+      <p class="muted">Ik reageer meestal binnen 2 werkdagen.</p>
+      <div class="actions"><a class="btn" href="contact.html">Neem contact op <span class="arrow" aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>

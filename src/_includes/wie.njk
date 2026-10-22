@@ -1,0 +1,57 @@
+---
+layout: base.njk
+---
+{% from "foto.njk" import foto %}
+<section class="hero-media hero-media--square">
+  <div class="hero-media__text stack">
+      <h1>Wie is Marit?</h1>
+      <p class="lead">{{ kop }}</p>
+  </div>
+  {{ foto(src=foto_portret, alt="Marit Brandsma, lachend, tegen een witte bakstenen muur", label="Portret van Marit", maat="vierkant", cls="hero-media__img", pageUrl=page.url) }}
+</section>
+
+<section class="band band--plum" aria-labelledby="route-title">
+  <div class="wrap stack-lg">
+    <h2 id="route-title">Waar ik vandaan kom</h2>
+    <ol class="route" aria-label="Waar Marit opgroeide">
+      <li>Noorwegen</li><li>Oeganda</li><li>Ethiopië</li><li>Kenia</li><li>Verenigde Staten</li><li>Nederland</li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="leven-title">
+  <div class="wrap stack-lg">
+    <h2 id="leven-title">Uit mijn leven</h2>
+    <div class="foto-row">
+{%- for f in fotos %}
+      {{ foto(src=f.src, alt=f.tekst, cls="foto--square", pageUrl=page.url) }}
+{%- endfor %}
+    </div>
+    <a class="textlink" href="{{ site.instagram }}">Meer op Instagram <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="verhaal-title">
+  <div class="wrap split split--top">
+    <h2 id="verhaal-title">Mijn verhaal</h2>
+    <div class="prose article">
+{{ content | safe }}
+    </div>
+  </div>
+</section>
+
+<section class="band band--magenta" aria-labelledby="naam-title">
+  <div class="wrap split">
+    <div class="stack">
+      <h2 id="naam-title">Waarom Met Marit?</h2>
+      <p class="lead">Een persoonlijke klik is een van de belangrijkste ingrediënten van een goed gesprek, een goede samenwerking en een goed resultaat.</p>
+    </div>
+    <p class="big-quote">Het contact ga je aan met mij. <span class="mark">Met Marit!</span></p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="verder-title">
+  <div class="wrap stack-lg">
+    <p class="lead">Lees meer over <a class="textlink" href="{{ 'werk-en-ervaring.html' | rel(page.url) }}">mijn werk en ervaring</a> of lees <a class="textlink" href="{{ 'schrijven.html' | rel(page.url) }}">wat ik schrijf</a>.</p>
+  </div>
+</section>

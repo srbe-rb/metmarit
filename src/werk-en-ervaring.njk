@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: "Werk en ervaring | Met Marit"
+description: "Het werk van Marit Brandsma door de jaren: coaching, interculturele projecten, coördinatie en opleiding. Een overzicht dat meegroeit."
+active: werk
+slug: werk-en-ervaring
+permalink: werk-en-ervaring.html
+---
+<section class="hero">
+  <div class="wrap split split--top">
+    <div class="stack">
+      <h1>Wat ik doe, en wat ik heb gedaan.</h1>
+    </div>
+    <div class="prose">
+      <p class="lead">Als netwerker, verbinder, regelaar, coördinator, begeleider en projectleider ga ik ‘aan’ op diversiteit, inclusiviteit, betrokkenheid en samenwerking.</p>
+      <p>Ik houd graag het grote geheel voor ogen, verbind mensen en ideeën aan elkaar, en zorg het liefst voor een praktische, haalbare werkwijze die recht doet aan een overkoepelende visie.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="Overzicht van werk en ervaring">
+  <div class="wrap">
+    <ol class="timeline">
+{%- for item in collections.werk %}
+      <li class="timeline__item">
+        <p class="timeline__years">{{ item.data.van }}{% if item.data.tot %}–{{ item.data.tot }}{% endif %}</p>
+        <div class="timeline__body">
+          <span class="chip chip--{{ item.data.soort | slugify }}">{{ item.data.soort }}</span>
+          <h2>{{ item.data.title }}</h2>
+          <p class="timeline__org">{{ item.data.organisatie }}{% if item.data.plaats %} · {{ item.data.plaats }}{% endif %}</p>
+          {% if item.content | trim %}<div class="timeline__text">{{ item.content | safe }}</div>{% endif %}
+        </div>
+      </li>
+{%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="band band--magenta" aria-labelledby="samen-title">
+  <div class="wrap split">
+    <h2 id="samen-title">Heb je een project voor mij?</h2>
+    <div class="stack">
+      <p class="lead">Naast mijn baan heb ik ruimte voor coaching en voor nieuwe projecten.</p>
+      <div class="actions"><a class="btn" href="projectcoordinatie.html#samenwerken">Stuur een projectvraag <span class="arrow" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="coaching.html">Over coaching</a></div>
+    </div>
+  </div>
+</section>

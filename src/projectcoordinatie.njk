@@ -1,0 +1,91 @@
+---
+layout: "base.njk"
+title: "Interculturele projectcoördinatie | Met Marit"
+description: "Projectcoördinatie voor organisaties en initiatieven waarin verbinding tussen culturen belangrijk is: projecten begeleiden, gesprekken voeren voor beleid, verhalen optekenen."
+active: "project"
+slug: "projectcoordinatie"
+permalink: "projectcoordinatie.html"
+noindex: false
+---
+{% from "foto.njk" import foto %}
+<section class="hero-media">
+  <div class="hero-media__text stack">
+      <h1>Projecten met een interculturele impact.</h1>
+      <p class="lead">Heb je een project waarin verbinding met mensen uit verschillende culturen belangrijk is? Ik help het organiseren, en zorg dat het écht tot leven komt.</p>
+      <div class="actions"><a class="btn" href="#samenwerken">Stuur een projectvraag <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  {{ foto(label="Marit aan het werk in een project", maat="liggend of staand", cls="hero-media__img", pageUrl=page.url) }}
+</section>
+
+<section class="band" style="padding-top:0" aria-labelledby="wat">
+  <div class="wrap stack-lg">
+    <h2 id="wat">Wat ik voor je project kan doen</h2>
+    <div class="columns">
+      <div class="column"><h3>Begeleiden</h3><p>Een vrijwilligersproject of groepstraject opzetten en begeleiden, van de eerste opzet tot de laatste bijeenkomst.</p></div>
+      <div class="column"><h3>Gesprekken voeren</h3><p>In gesprek gaan met mensen van verschillende culturele achtergronden, bijvoorbeeld als voorbereiding op beleid.</p></div>
+      <div class="column"><h3>Verhalen optekenen</h3><p>Persoonlijke verhalen ophalen en opschrijven, zodat ervaringen zichtbaar worden.</p></div>
+    </div>
+    <div class="split split--top" style="margin-top:1rem">
+      <div class="prose">
+        <p>Ik werk op de manier die bij jou en je project past: praktisch in de uitvoering, of juist vanuit een breder beleidsmatig perspectief.</p>
+        <p>Door mijn multiculturele achtergrond heb ik een sterke band met mensen van allerlei achtergronden. Ik heb de SPH afgerond en werkte jarenlang als vrijwilligerscoördinator. In die jaren bouwde ik een breed netwerk op, dat ik graag betrek bij de projecten die ik coördineer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="cases">
+  <div class="wrap stack-lg">
+    <div class="stack"><h2 id="cases">Eerdere projecten</h2></div>
+    <div class="quotes">
+      <article class="case">
+        <span class="who">Gemeente Nunspeet</span>
+        <h3>Inclusie Agenda</h3>
+        <p>Marit voerde gesprekken met inwoners van verschillende culturele achtergronden, ter voorbereiding op de inclusie agenda van de gemeente.</p>
+        <figure class="quote"><blockquote><p>Ze is prettig in contact en afstemming. Ze heeft opgeleverd wat is afgesproken, met nog veel mooie extra bijvangsten. Ze is erg gedreven in wat ze doet en haar betrokkenheid met de inhoud is groot. Marit heeft een mooie basis gelegd voor onze inclusie agenda!</p></blockquote><figcaption>Gemeente Nunspeet</figcaption></figure>
+      </article>
+      <article class="case">
+        <span class="who">FlevoMeer Bibliotheek</span>
+        <h3>Een Stap Verder</h3>
+        <p>Een nieuw initiatief dat niet eerder georganiseerd was. Alle acht deelnemers waren bijna elke week aanwezig, en dat is uniek voor een project als dit. Ze kregen meer zelfvertrouwen, ontdekten hun talenten en durfden steeds meer stappen te zetten.</p>
+        <ul class="voices" aria-label="Wat deelnemers zeiden">
+          <li>“Door het project heb ik mijn kwaliteiten beter leren kennen. Nu kan ik mezelf met meer zelfvertrouwen voorstellen bij een sollicitatie.”</li>
+          <li>“Het belangrijkste wat ik heb geleerd, is hoe ik vanaf nul kan beginnen en mezelf opnieuw kan opbouwen.”</li>
+          <li>“Door het project heb ik meer zelfvertrouwen gekregen, iets wat ik eerder niet had.”</li>
+          <li>“Mijn taal is niet perfect, maar ik weet wat ik kan, dus ik durf meer.”</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band band--magenta" id="samenwerken" aria-labelledby="sw-title">
+  <div class="wrap split split--top">
+    <div class="stack">
+      <h2 id="sw-title">Samenwerken aan jouw project</h2>
+      <p class="lead">Mail, bel of vul het formulier in. Als je doel, scope en planning deelt, kan ik snel inschatten of ik kan helpen.</p>
+      <div class="contact-lines">
+  <span><strong>Mail</strong> <a href="mailto:metmarit@gmail.com">metmarit@gmail.com</a></span>
+  <span><strong>Bel</strong> <a href="tel:+31651495471">+31 6 51495471</a></span>
+</div>
+    </div>
+    <form class="form" data-form="project" id="projectformulier" novalidate>
+  <div class="row">
+    <div class="field"><label for="p-naam">Naam</label><input id="p-naam" name="naam" autocomplete="name" required></div>
+    <div class="field"><label for="p-org">Organisatie en rol</label><input id="p-org" name="organisatie" autocomplete="organization"></div>
+  </div>
+  <div class="row">
+    <div class="field"><label for="p-email">E-mail</label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="p-tel">Telefoon</label><input id="p-tel" name="telefoon" type="tel" autocomplete="tel"></div>
+  </div>
+  <div class="field">
+    <label for="p-bericht">Je project</label>
+    <span class="hint" id="p-hint">Wat is het doel, wat valt erbinnen, en wat is de planning? Dan kan ik snel inschatten of ik kan helpen.</span>
+    <textarea id="p-bericht" name="bericht" aria-describedby="p-hint"></textarea>
+  </div>
+  <div class="actions"><button class="btn" type="submit">Verstuur projectvraag <span class="arrow" aria-hidden="true">→</span></button></div>
+  <p class="form-note">Ik reageer meestal binnen 2 werkdagen. Lees hoe ik met je gegevens omga in de <a href="privacyverklaring.html">privacyverklaring</a>.</p>
+  <p class="form-status" role="status" hidden></p>
+</form>
+  </div>
+</section>

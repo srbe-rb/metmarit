@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+{% if noindex or site.preview %}<meta name="robots" content="noindex">
+{% endif %}<link rel="canonical" href="{{ site.url }}/{{ slug }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:site_name" content="Met Marit">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ site.url }}/{{ slug }}">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f2a93b'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%231c2a29'%3Em%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="{{ 'assets/fonts/newsreader-latin-wght-normal.woff2' | rel(page.url) }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ 'assets/style.css' | rel(page.url) }}">
+{% if active == "home" %}<script type="application/ld+json">{{ jsonld | dump | safe }}</script>
+{% endif %}</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="{{ 'index.html' | rel(page.url) }}" aria-label="Met Marit, naar de homepage"><span class="logo__met">met</span><span class="logo__name">Marit</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Hoofdmenu">
+{%- for item in site.nav %}
+      <a href="{{ item.href | rel(page.url) }}"{% if item.key == active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+{%- endfor %}
+      <a class="btn btn--sun" href="{{ 'contact.html' | rel(page.url) }}">Kennismaken</a>
+    </nav>
+  </div>
+</header>
+<main id="inhoud">
+{{ content | safe }}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="stack">
+        <a class="logo" href="{{ 'index.html' | rel(page.url) }}" aria-label="Met Marit, naar de homepage"><span class="logo__met">met</span><span class="logo__name">Marit</span></a>
+        <p style="max-width:24rem">Coaching en interculturele projectcoördinatie. In Nunspeet, Ermelo of online.</p>
+        <img class="footer-bird" src="{{ 'assets/logo.svg' | rel(page.url) }}" alt="" width="96" height="117">
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="tel:{{ site.telHref }}">{{ site.tel }}</a></li>
+          <li>{{ site.plaatsen }}</li>
+          <li><a href="{{ 'ervaringen.html' | rel(page.url) }}">Ervaringen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Volg Marit</h2>
+        <ul>
+          <li><a href="{{ site.instagram }}">Instagram</a></li>
+          <li><a href="{{ site.facebook }}">Facebook</a></li>
+          <li><a href="{{ site.linkedin }}">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-small">
+      <span>© 2026 Met Marit</span><span>KVK {{ site.kvk }}</span><span>BTW-id {{ site.btw }}</span><a href="{{ 'privacyverklaring.html' | rel(page.url) }}">Privacyverklaring</a>
+    </div>
+  </div>
+</footer>
+<script src="{{ 'assets/site.js' | rel(page.url) }}"></script>
+</body>
+</html>

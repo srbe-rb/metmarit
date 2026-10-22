@@ -1,0 +1,93 @@
+---
+layout: "base.njk"
+title: "Coaching in Nunspeet, Ermelo en online | Met Marit"
+description: "Persoonlijke, creatieve coaching zonder vast traject. Met beelden, materiaal en vragen werken we aan wat jij nodig hebt. Marit Brandsma, Nunspeet, Ermelo en online."
+active: "coaching"
+slug: "coaching"
+permalink: "coaching.html"
+noindex: false
+---
+{% from "foto.njk" import foto %}
+<section class="hero-media hero-media--square">
+  <div class="hero-media__text stack">
+      <h1>Zien en gezien worden.</h1>
+      <p class="lead">Veiligheid, vertrouwen en verbinding. Nieuwsgierig onderzoeken we wat er bij jou leeft, en wat jij nodig hebt om tot je recht te komen.</p>
+      <div class="actions"><a class="btn" href="#kennismaken">Plan een kennismaking <span class="arrow" aria-hidden="true">→</span></a></div>
+  </div>
+  {{ foto(src="/media/praktijk-materiaal.jpg", alt="Werkmateriaal in de praktijk: gekleurde houten schijfjes, figuurtjes en pompons op tafel", cls="hero-media__img", pageUrl=page.url) }}
+</section>
+
+<section class="band" style="padding-top:0" aria-labelledby="voorwie">
+  <div class="wrap split split--top">
+    <div class="stack">
+      <h2 id="voorwie">Voor wie is coaching met Marit?</h2>
+    </div>
+    <div class="prose">
+      <p>Voor wie geen genoegen meer neemt met ‘zo is het nou eenmaal’, en zichzelf een voller, rijker leven gunt.</p>
+      <p>Misschien loop je steeds tegen hetzelfde aan. Misschien zit iets uit je verleden je in de weg. Of je wilt beter weten wat je zelf eigenlijk wilt. Je hoeft het nog niet precies te kunnen benoemen; daar zoeken we samen naar.</p>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:2.5rem"><div class="cards" aria-label="Thema’s"><span class="card">Zelfacceptatie</span><span class="card">Je verleden</span><span class="card">Angsten</span><span class="card">Je grenzen voelen</span><span class="card">Wat wil ik eigenlijk?</span></div></div>
+</section>
+
+<section class="band" aria-labelledby="werkwijze">
+  <div class="wrap split split--top">
+    <div class="stack">
+      <h2 id="werkwijze">Hoe ik werk</h2>
+      <p class="lead">Creatief, veelzijdig en op maat. We gaan een open proces aan en ontdekken al doende wat jij nodig hebt.</p>
+    </div>
+    <ul class="ticks">
+      <li><strong>Geen vaste trajecten.</strong> We stemmen samen af hoe vaak en hoe lang, op basis van wat jij nodig hebt.</li>
+      <li><strong>Meer dan praten.</strong> Ik werk met beelden en materiaal, met voorbeelden en vragen. Samen kijken we wat bij jou past.</li>
+      <li><strong>Veilig, en uitdagend.</strong> Een warm welkom, in een omgeving waarin je je veilig genoeg voelt om verandering aan te gaan, en uitgedaagd genoeg om niet hetzelfde te blijven doen.</li>
+      <li><strong>Gericht op jouw eigen kracht.</strong> Zonder oordeel en zonder kant-en-klare oplossingen.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="begin">
+  <div class="wrap stack-lg">
+    <h2 id="begin">Zo begint het</h2>
+    <ol class="steps">
+      <li><h3>Je neemt contact op</h3><p>Via het formulier, per mail of telefoon. Een paar zinnen over wat er speelt is genoeg.</p></li>
+      <li><h3>We maken kennis</h3><p>We praten over je vraag en kijken of het klikt. Dat is minstens zo belangrijk als de methode.</p></li>
+      <li><h3>We stemmen af</h3><p>Hoe vaak we elkaar zien en waar: in Nunspeet, in Ermelo of online.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="ervaringen-coaching">
+  <div class="wrap stack-lg">
+    <h2 id="ervaringen-coaching">Ervaringen</h2>
+    <figure class="quote" style="max-width:48rem"><blockquote><p class="big-quote">Je stelt intuïtief de goede vraag, waardoor ik snel bij de kern kom.</p></blockquote><figcaption>Over coaching met Marit</figcaption></figure>
+    <a class="textlink" href="ervaringen.html">Lees alle ervaringen <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="band band--magenta" id="kennismaken" aria-labelledby="km-title">
+  <div class="wrap split split--top">
+    <div class="stack">
+      <h2 id="km-title">Laten we kennismaken</h2>
+      <p class="lead">Vul het formulier in, dan neem ik contact met je op voor een kennismaking.</p>
+      <div class="contact-lines">
+  <span><strong>Mail</strong> <a href="mailto:metmarit@gmail.com">metmarit@gmail.com</a></span>
+  <span><strong>Bel</strong> <a href="tel:+31651495471">+31 6 51495471</a></span>
+</div>
+    </div>
+    <form class="form" data-form="coaching" id="coachingformulier" novalidate>
+  <div class="row">
+    <div class="field"><label for="c-naam">Naam</label><input id="c-naam" name="naam" autocomplete="name" required></div>
+    <div class="field"><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+  </div>
+  <div class="field"><label for="c-tel">Telefoon <span class="muted">(als je liever gebeld wordt)</span></label><input id="c-tel" name="telefoon" type="tel" autocomplete="tel"></div>
+  <div class="field">
+    <label for="c-bericht">Wat speelt er?</label>
+    <span class="hint" id="c-hint">Een paar zinnen is genoeg. Deel hier liever geen gevoelige persoonlijke informatie; dat bespreken we samen.</span>
+    <textarea id="c-bericht" name="bericht" aria-describedby="c-hint"></textarea>
+  </div>
+  <div class="actions"><button class="btn" type="submit">Verstuur <span class="arrow" aria-hidden="true">→</span></button></div>
+  <p class="form-note">Ik reageer meestal binnen 2 werkdagen. Lees hoe ik met je gegevens omga in de <a href="privacyverklaring.html">privacyverklaring</a>.</p>
+  <p class="form-status" role="status" hidden></p>
+</form>
+  </div>
+</section>
